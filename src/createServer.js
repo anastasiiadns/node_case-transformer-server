@@ -47,6 +47,9 @@ function createServer() {
 
     const result = convertToCase(text, toCase);
 
+    res.statusCode = 200;
+    res.statusMessage = 'OK';
+
     res.end(
       JSON.stringify({
         originalCase: result.originalCase,
